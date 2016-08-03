@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-  var fruit = ["apples" , "oranges" , "bananas" , "grapes"];
-  var total cash = 20;
+  // var fruit = ["apples" , "oranges" , "bananas" , "grapes"];
+  // var total cash = 20;
 
 
 
 setInterval(priceShift, 15000);
-}
+});
 
 function Customer(cash){
   this.cash = cash;
@@ -83,4 +83,3 @@ var timedPriceChange = setInterval (function() {
 // CONSOLE LOG ===============================
 initialPrice();
 console.log(productPrices.apple);
-timedPriceChange();
