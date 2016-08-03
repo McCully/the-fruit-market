@@ -5,43 +5,10 @@ $(document).ready(function(){
   var c = new Customer(totalCash);
 
   // Store customer data.
-<<<<<<< HEAD
   $('#container').data("info", c)
 
 
   }
-=======
-  $('.container').data("info", c)
-
-  $('.container').on('click', ".btn", function() {
-
-  	console.log("click:")
-
-  	var customerInfo = $('.container').data("info")
-
-  	switch(this.id) {
-  		case 'a':
-  		    customerInfo.apple += 1;
-  		    $('#appleCount').text(customerInfo.apple)
-  		    break;
-  		case 'o':
-  		    customerInfo.oranges += 1;
-  		    $('#orangeCount').text(customerInfo.apple)
-  		    break;
-  		case 'b':
-  		    customerInfo.bananas += 1;
-  		    $('#bananaCount').text(customerInfo.apple)
-  		    break;
-  		case 'p':
-  		    customerInfo.pears += 1;
-  		    $('#pearCount').text(customerInfo.apple)
-  		    break;
-  	}
-
-  	$('.container').data("info", c)
-
-  });
->>>>>>> cc146b1aa79227690ed75c7694f6c0a990326b77
 });
 
 function Customer(cash){
@@ -58,7 +25,7 @@ var productPrices = {
   apple: 0,
   orange: 0,
   banana: 0,
-  pear: 0
+  grapes: 0
 };
 
 function priceShift(currentPrice){ // changes the price of a single item
@@ -76,6 +43,8 @@ function priceShift(currentPrice){ // changes the price of a single item
 
   return newPrice;
 }
+
+
 
 function randomNumber(min, max){
   return Math.floor(Math.random() * (1 + max - min) + min);
