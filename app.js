@@ -6,9 +6,7 @@ $(document).ready(function(){
 
   // Store customer data.
   $('#container').data("info", c)
-
-
-}
+});
 
 function Customer(cash){
   this.cash = cash;
