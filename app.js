@@ -4,8 +4,9 @@ $(document).ready(function(){
 
   var c = new Customer(totalCash);
 
-
-}
+  // Store customer data.
+  $('#container').data("info", c)
+});
 
 function Customer(cash){
   this.cash = cash;
@@ -14,8 +15,6 @@ function Customer(cash){
   this.bananas = 0;
   this.grapes = 0;
 }
-
-
 
 // Theresa's Functions ===================================================
 var productPrices = {
