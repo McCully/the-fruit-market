@@ -6,6 +6,10 @@ $(document).ready(function(){
 
   // Store customer data.
   $('#container').data("info", c)
+
+  $('#container').on('click', function() {
+
+  });
 });
 
 function Customer(cash){
