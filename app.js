@@ -3,19 +3,19 @@ $(document).ready(function(){
   var total cash = 20;
 
 
-  function Customer(cash){
-    this.cash = cash;
-    this.apple = 0;
-    this.oranges = 0;
-    this.bananas = 0;
-    this.grapes = 0;
-  }
-
-
-
 
 
 }
+
+function Customer(cash){
+  this.cash = cash;
+  this.apple = 0;
+  this.oranges = 0;
+  this.bananas = 0;
+  this.grapes = 0;
+}
+
+
 
 // Theresa's Functions ===================================================
 var productPrices = {
