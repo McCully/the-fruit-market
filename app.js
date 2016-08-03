@@ -19,7 +19,7 @@ function Customer(cash){
 
 
 // Theresa's Functions ===================================================
-
+// :)
 //initialPrice();
 
 //======
