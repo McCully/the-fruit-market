@@ -13,20 +13,22 @@ $(document).ready(function(){
 
   	var customerInfo = $('.container').data("info")
 
-  	console.log("id: ", this.id)
-
   	switch(this.id) {
   		case 'a':
   		    customerInfo.apple += 1;
+  		    $('#appleCount').text(customerInfo.apple)
   		    break;
   		case 'o':
   		    customerInfo.oranges += 1;
+  		    $('#orangeCount').text(customerInfo.apple)
   		    break;
   		case 'b':
   		    customerInfo.bananas += 1;
+  		    $('#bananaCount').text(customerInfo.apple)
   		    break;
   		case 'p':
   		    customerInfo.pears += 1;
+  		    $('#pearCount').text(customerInfo.apple)
   		    break;
   	}
 
