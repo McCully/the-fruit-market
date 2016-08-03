@@ -1,6 +1,20 @@
 
-#container {
+.container {
 	display: flex;
+}
+
+.count {
+	margin: 0 120px 0 0;
+}
+
+
+.ctn {
+	display: flex;
+}
+
+.btn {
+	display: inline-block;
+	margin: 10px 125px 0 50px;
 }
 
 #apple {
