@@ -1,5 +1,7 @@
 $(document).ready(function(){
-  // var fruit = ["apples" , "oranges" , "bananas" , "grapes"];
+  var fruit = ["apples" , "oranges" , "bananas" , "grapes"];
+  var total cash = 20;
+
 
   function Customer(cash){
     this.cash = cash;
@@ -10,4 +12,5 @@ $(document).ready(function(){
   }
 
   
+
 }
