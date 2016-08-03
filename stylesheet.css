@@ -1,6 +1,11 @@
 
-#container {
+.container {
 	display: flex;
+}
+
+.btn {
+	display: inline-block;
+	margin: 10px 125px 0 50px;
 }
 
 #apple {
