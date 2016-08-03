@@ -45,13 +45,25 @@ function Customer(cash){
   this.pears = 0;
 }
 
-// Theresa's Functions ===================================================
 var productPrices = {
   apple: 0,
   orange: 0,
   banana: 0,
-  pear: 0
+  pears: 0
 };
+
+function initialPrice() {
+    productPrices.apple = initialGen();
+     productPrices.orange = initialGen();
+     productPrices.banana = initialGen();
+     productPrices.pear = initialGen();
+       function initialGen() {
+       var min = 50
+       var max = 999
+       startingPrice = randomNumber(min, max);
+       return startingPrice
+   };
+ };
 
 function priceShift(currentPrice){ // changes the price of a single item
   var min = currentPrice - 50; // minimum price
@@ -68,8 +80,23 @@ function priceShift(currentPrice){ // changes the price of a single item
 
   return newPrice;
 }
+ productPrices.apple = priceShuft(productPrices.apple);
+ productPrices.orange = priceShuft(productPrices.orange);
+ productPrices.banana = priceShuft(productPrices.banana);
+ productPrices.pear = priceShuft(productPrices.pear);
+
 
 function randomNumber(min, max){
   return Math.floor(Math.random() * (1 + max - min) + min);
 
 }
+
+var timedPriceChange = setInterval (function() {
+ priceShift();
+   console.log(productPrices.apple);
+ }, 15000);
+
+ // CONSOLE LOG ===============================
+ initialPrice();
+ console.log(productPrices.apple);
+ timedPriceChange();
