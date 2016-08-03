@@ -1,8 +1,8 @@
 $(document).ready(function(){
   var fruit = ["apples" , "oranges" , "bananas" , "grapes"];
-  var total cash = 20;
+  var totalCash = 20;
 
-
+  var c = new Customer(totalCash);
 
 
 }
