@@ -19,13 +19,6 @@ function Customer(cash){
   this.pears = 0;
 }
 
-// Theresa's Functions ===================================================
-
-// :)
-//initialPrice();
-
-//======
-
 var productPrices = {
   apple: 0,
   orange: 0,
