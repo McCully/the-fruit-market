@@ -1,11 +1,14 @@
 $(document).ready(function(){
-  var fruit = ["apples" , "oranges" , "bananas" , "grapes"];
+  var fruit = ["apples" , "oranges" , "bananas" , "pears"];
   var totalCash = 20;
 
   var c = new Customer(totalCash);
 
   // Store customer data.
   $('#container').data("info", c)
+
+
+  }
 });
 
 function Customer(cash){
@@ -13,10 +16,11 @@ function Customer(cash){
   this.apple = 0;
   this.oranges = 0;
   this.bananas = 0;
-  this.grapes = 0;
+  this.pears = 0;
 }
 
 // Theresa's Functions ===================================================
+
 var productPrices = {
   apple: 0,
   orange: 0,
