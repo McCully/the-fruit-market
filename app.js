@@ -5,9 +5,32 @@ $(document).ready(function(){
   var c = new Customer(totalCash);
 
   // Store customer data.
-  $('#container').data("info", c)
+  $('.container').data("info", c)
 
-  $('#container').on('click', function() {
+  $('.container').on('click', ".btn", function() {
+
+  	console.log("click:")
+
+  	var customerInfo = $('.container').data("info")
+
+  	console.log("id: ", this.id)
+
+  	switch(this.id) {
+  		case 'a':
+  		    customerInfo.apple += 1;
+  		    break;
+  		case 'o':
+  		    customerInfo.oranges += 1;
+  		    break;
+  		case 'b':
+  		    customerInfo.bananas += 1;
+  		    break;
+  		case 'p':
+  		    customerInfo.pears += 1;
+  		    break;
+  	}
+
+  	$('.container').data("info", c)
 
   });
 });
@@ -25,7 +48,7 @@ var productPrices = {
   apple: 0,
   orange: 0,
   banana: 0,
-  grapes: 0
+  pear: 0
 };
 
 function priceShift(currentPrice){ // changes the price of a single item
