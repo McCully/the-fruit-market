@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   var fruit = ["apples" , "oranges" , "bananas" , "pears"];
   var totalCash = 20;
@@ -34,9 +35,9 @@ $(document).ready(function(){
 
   	$('.container').data("info", c)
 
-    var timedPriceChange = setInterval (function() {    // 15 second delay :)
-     priceShift();
-       console.log(productPrices.apple);
+    setInterval(function() {    // 15 second delay :)
+    priceShift();
+    console.log(productPrices.apple);
      }, 15000);
   });
 });
@@ -50,7 +51,7 @@ var productPrices = {
 var cashOnHand = 100000;
 
 function buyProduct() {
-  var productPrice = //Price of product clicked on ($(this).id......);
+  var productPrice; //Price of product clicked on ($(this).id......);
   if (poductPrice > cashOnHand){
     alert("You don't have enough money! (GET A JOB!)")
   }
@@ -81,20 +82,20 @@ function priceShuft(currentPrice){ // changes the price of a single item
 
   var newPrice = randomNumber(min, max);
 
-  if (newPrice < 50) {
-    newPrice = 50;
-  }
-  if (newPrice > 999) {
-    newPrice = 999;
-  }
+    if (newPrice < 50) {
+      newPrice = 50;
+    }
+    if (newPrice > 999) {
+      newPrice = 999;
+    }
 
-  return newPrice;
+    return newPrice;
+  }
+   productPrices.apple = priceShuft(productPrices.apple);
+   productPrices.orange = priceShuft(productPrices.orange);
+   productPrices.banana = priceShuft(productPrices.banana);
+   productPrices.pear = priceShuft(productPrices.pear);
 }
- productPrices.apple = priceShuft(productPrices.apple);
- productPrices.orange = priceShuft(productPrices.orange);
- productPrices.banana = priceShuft(productPrices.banana);
- productPrices.pear = priceShuft(productPrices.pear);
-
 
 function randomNumber(min, max){
   return Math.floor(Math.random() * (1 + max - min) + min);
@@ -104,4 +105,4 @@ function randomNumber(min, max){
  // CONSOLE LOG ===============================
  initialPrice();
  console.log(productPrices.apple);
- timedPriceChange();
+ //timedPriceChange();
