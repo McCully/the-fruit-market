@@ -1,4 +1,13 @@
 
+function Customer(cash){
+  this.cash = cash;
+  this.apple = 0;
+  this.oranges = 0;
+  this.bananas = 0;
+  this.pears = 0;
+}
+
+
 $(document).ready(function(){
   var fruit = ["apples" , "oranges" , "bananas" , "pears"];
   var totalCash = 20;
