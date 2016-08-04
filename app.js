@@ -37,13 +37,7 @@ $(document).ready(function(){
   });
 });
 
-function Customer(cash){
-  this.cash = cash;
-  this.apple = 0;
-  this.oranges = 0;
-  this.bananas = 0;
-  this.pears = 0;
-}
+
 
 var productPrices = {
   apple: 0,
@@ -51,6 +45,8 @@ var productPrices = {
   banana: 0,
   pears: 0
 };
+var cashOnHand = 100000;
+
 
 function initialPrice() {
     productPrices.apple = initialGen();
@@ -65,9 +61,11 @@ function initialPrice() {
    };
  };
 
-function priceShift(currentPrice){ // changes the price of a single item
+function priceShift() {
+
+function priceShuft(currentPrice){ // changes the price of a single item
   var min = currentPrice - 50; // minimum price
-  var max = currentPrice - 50; // maximum price
+  var max = currentPrice + 50; // maximum price
 
   var newPrice = randomNumber(min, max);
 
@@ -95,6 +93,7 @@ var timedPriceChange = setInterval (function() {
  priceShift();
    console.log(productPrices.apple);
  }, 15000);
+
 
  // CONSOLE LOG ===============================
  initialPrice();
