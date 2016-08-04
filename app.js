@@ -91,11 +91,5 @@ function randomNumber(min, max){
 
 var timedPriceChange = setInterval (function() {
  priceShift();
-   console.log(productPrices.apple);
- }, 15000);
 
-
- // CONSOLE LOG ===============================
- initialPrice();
- console.log(productPrices.apple);
- timedPriceChange();
+  15000);
