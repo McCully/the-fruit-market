@@ -2,7 +2,7 @@ $(document).ready(function(){
   var fruit = ["apples" , "oranges" , "bananas" , "pears"];
   var totalCash = 20;
 
-  var c = new Customer(totalCash);
+  //var c = new Customer(totalCash);
 
   // Store customer data.
   $('.container').data("info", c)
@@ -34,10 +34,12 @@ $(document).ready(function(){
 
   	$('.container').data("info", c)
 
+    var timedPriceChange = setInterval (function() {    // 15 second delay :)
+     priceShift();
+       console.log(productPrices.apple);
+     }, 15000);
   });
 });
-
-
 
 var productPrices = {
   apple: 0,
@@ -47,6 +49,16 @@ var productPrices = {
 };
 var cashOnHand = 100000;
 
+function buyProduct() {
+  var productPrice = //Price of product clicked on ($(this).id......);
+  if (poductPrice > cashOnHand){
+    alert("You don't have enough money! (GET A JOB!)")
+  }
+  else{
+    // Item clicked on +1
+    //cashOnHand -= productPrice;
+  }
+}
 
 function initialPrice() {
     productPrices.apple = initialGen();
@@ -88,12 +100,6 @@ function randomNumber(min, max){
   return Math.floor(Math.random() * (1 + max - min) + min);
 
 }
-
-var timedPriceChange = setInterval (function() {
- priceShift();
-   console.log(productPrices.apple);
- }, 15000);
-
 
  // CONSOLE LOG ===============================
  initialPrice();
